@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import { connectDB } from './database.js';
 import buttonsRouter from './buttons.routes.js';
 const app=express();
+const PORT= process.env.PORT || 4000
 app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
@@ -18,6 +19,6 @@ const main=async()=>{
 main();
 
 
-app.listen(5000,()=>{
+app.listen(PORT,()=>{
     console.log("server online")
 });
