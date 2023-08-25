@@ -1,11 +1,11 @@
 {
   "name": "server",
   "version": "0.1.0",
-  "lockfileVersion": 3,
-  "requires": true,
-  "private": true,
   "type": "module",
-  "packages": {},
+  "main": "index.js",
+  "engines":{
+    "node": "14.x"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
