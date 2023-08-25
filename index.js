@@ -16,10 +16,7 @@ app.use(buttonsRouter);
 const main=async()=>{
     await connectDB();
 }
-
 main();
-
-
 app.listen(PORT,()=>{
     console.log("server online")
 });
