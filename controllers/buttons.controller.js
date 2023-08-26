@@ -1,4 +1,4 @@
-const { Button } = require('../models/button.model.js');
+const Button = require('../models/button.model.js');
 
 const getButtons = async (req, res) => {
     try {

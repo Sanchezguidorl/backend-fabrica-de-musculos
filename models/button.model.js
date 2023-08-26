@@ -13,4 +13,5 @@ const buttonSchema= new Schema({
     }
 });
 
-module.exports= mongoose.model('button',buttonSchema);
+const Button=mongoose.model('button',buttonSchema);
+module.exports= Button;
