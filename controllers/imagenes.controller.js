@@ -2,16 +2,26 @@ const ImagenModel = require('../models/imagen.model.js');
 const admin = require('firebase-admin');
 const fs = require('fs');
 
- const getImagenes=async(req,res)=>{
-try {
-    const findImages= await ImagenModel.find();
-    if(!findImages) res.status(204).json({success:true,message:'Image collection is empty'});
-
-    return res.json(findImages);
-} catch (error) {
-    res.status(500).json({success:false,message:'Image search failed'})
-}
-};
+const getImagenes = async (req, res) => {
+    try {
+      const findImages = await ImagenModel.find();
+      if (!findImages) {
+        return res.status(204).json({ success: true, message: 'Image collection is empty' });
+      }
+  
+      const imagesWithBase64 = await Promise.all(
+        findImages.map(async (image) => {
+          const imageBuffer = await admin.storage().bucket('gs://fabrica-de-musculos-server.appspot.com').file(image.path).download();
+          const base64 = imageBuffer[0].toString('base64');
+          return { ...image.toObject(), imageBase64: base64 };
+        })
+      );
+  
+      return res.json(imagesWithBase64);
+    } catch (error) {
+      res.status(500).json({ success: false, message: 'Image search failed' });
+    }
+  };
 
 const createImagen = async (req, res) => {
     const { name, message } = req.body;
