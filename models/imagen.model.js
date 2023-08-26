@@ -1,19 +1,22 @@
-import mongoose, { Schema } from "mongoose";
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
 
-const imagenSchema= new Schema({
+const imagenSchema = new Schema({
     name: {
-        type:String,
+        type: String,
         required: true
     },
-    path:{
-        type:String,
-        unique:true,
-        required:true
+    path: {
+        type: String,
+        unique: true,
+        required: true
     },
-    message:{
-        type:String,
-        require: true
+    message: {
+        type: String,
+        required: true
     }
 });
 
-export const Imagen=mongoose.model('imagen',imagenSchema);
+const ImagenModel= mongoose.model('imagen', imagenSchema);
+
+module.exports = ImagenModel;

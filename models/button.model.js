@@ -1,4 +1,5 @@
-import { Schema,mongoose } from "mongoose";
+const { Schema, mongoose } = require('mongoose');
+
 
 const buttonSchema= new Schema({
     text:{
@@ -12,4 +13,4 @@ const buttonSchema= new Schema({
     }
 });
 
-export const Button= mongoose.model('button',buttonSchema);
+module.exports= mongoose.model('button',buttonSchema);

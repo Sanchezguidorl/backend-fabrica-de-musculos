@@ -1,15 +1,16 @@
-import { Router } from "express";
-import { createImagen, deleteImagen, getImagenes } from "./controllers/imagenes.controller.js";
-import multer from "multer";
+const multer = require('multer');
+const admin = require('firebase-admin');
+const { createImagen, deleteImagen, getImagenes } = require('./controllers/imagenes.controller.js');
+const serviceAccount = require('./firebase-config.json');
+const { Router } = require('express');
 
-const storage = multer.diskStorage({
-  destination: 'public/images',
-  filename: function (req, file, callback) {
-    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
-    callback(null, file.fieldname + '-' + uniqueSuffix + '.jpg'); // Agregar .jpg al final
-  },
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
 });
-const upload =multer({ storage: storage });
+
+
+const storage = multer.memoryStorage();
+const upload = multer({ storage });
 
 const router=Router();
 
@@ -19,4 +20,4 @@ router.post('/images/add', upload.single('image'),createImagen);
 
 router.delete('/images/:id/delete', deleteImagen);
 
-export default router;
+module.exports= router;

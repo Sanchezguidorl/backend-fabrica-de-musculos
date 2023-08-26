@@ -1,12 +1,11 @@
-import { Router } from "express";
-import { createButton, deleteButton, getButtons } from "./controllers/buttons.controller.js";
+const express = require('express');
+const { createButton, deleteButton, getButtons } = require('./controllers/buttons.controller.js');
+const router = express.Router();
 
-const router=Router();
+router.get('/buttons', getButtons);
 
-router.get('/buttons',getButtons);
+router.post('/buttons/add', createButton);
 
-router.post('/buttons/add',createButton);
+router.delete('/buttons/delete/:id', deleteButton);
 
-router.delete('/buttons/delete/:id',deleteButton);
-
-export default router;
+module.exports = router;
