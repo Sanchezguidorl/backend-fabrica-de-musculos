@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "fabrica-de-musculos-server",
+  "private_key_id": "0c9770f6d8987c6b701931d357e2db94a4aaee76",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC8kM04f5PSkUUu\nSow/l/hty7OE2gK6AfbS/LZnWb7AXo3h7SSMyfsXkvtrv04F+XWdiCfmEXHXP98p\nHlKmlfcofnwyX6JjQr1LJ7whfcEt+B5Z70oAWzcWOAg8Ju4m981ZwvC39BRAKVV6\nGngkpulFoPJRyxaVRQ1UoE6ssWCpKePfqk15ljHGKCQsXHUnBYBlRl0aC/gO5lEx\nj8YH7T1DjNDYuYhY4DhMl2nhIIH2nnBnL+rus0yB2tqaEoiSk9OeAx7+jJmGIsHo\nJVfp4ESLcyNXITH1rdGvOBbQFfIbNDMFU3jdrPMhBXFuky1z8la/Rlpl+1iPk+cn\nBVrsoixBAgMBAAECggEACkJAgAHk23Be2KlinvUYJXUPI7uuqUsBEDKCg/XsfE/I\nnVGHCwfUGtC6z/5c8tNDFFp7fTdWv7SwYe7N5VVEWJYlEKKGVaskXEnhoNrUHzmg\nARmVJ5bO1O0geZFOpJ0XtXn3GbL0RRdamKWHAst35nteo5eOd3mFw6RjE18lGJ7g\nZ9pQQdtMe9DeB3E/iRQsPM06w1myIrxSMSMecs481dBW6zVrr522CQNAYaEmw1rU\nWXKj2XczRuQG7d+JWYLWFQBpQraZLt2EE3eKcn7ClJr8DdY7kQTt3qcSgLjz6C6z\n/3kNEAVM9NoX5eVspc1oC4p7O2tsQzP5QwIbdBxMoQKBgQDeNEiWn86D3QiTu9A6\nyXK1MQYDSM0ASf0a2Q7HzR8C27eRqx+Qs2TEb2i32lIjpXJahBPYOieN9Hy6/uT9\nI6q8H8I+0SUh7QSzE4W2w6XzpgboAgQpdPC3ri/O24+PsC1zmIrE+LjXyoPmm7/G\nUTomFpUlGaWpvu/4xFwxqpwUSQKBgQDZPsUKYHij0IrzduHQcDC6sS8vql6h3crh\n4IFPXkLR5e+LY7ax0a6ZQVuKpz0yvAnk+NRlaQujHk7za8HLQmG1LQNcYYpeeJP+\nB+E5ZZyRWHnvGDUFZb4ULrNnPQuZOh+Kmp/Pfvj9o1PcLDqA2/5QHFva8i4AMLoD\nEJqNgoRoOQKBgQCqh4WN02cyW9fRSTotY5zc4ZqzupNZvW65xAtL22gJUYY4DRRU\ngNi8yKOdNbgEE10HioWQVFE26IMxH52tiEnnxpfUjb3po3UP2dOsx8n8i1aRh7qZ\n9l0nGk8meepbY+H97PvS3u887Pb9bFppYL03re0YY+53r0mLqWb31u+hwQKBgGIW\n9HLuAiq9I7AwUl+B+I6jKBIWk+n0MgHxE5HZlsQdVR6T5E6/xV0PZJzjTD+XJcSM\nEaLEXmvFaJKCahszmthqPaU9qXNkcDX4Ktp2pc3+q/en73DDcqK8P2by6kTCOLGl\nhVj0FMq5L0kvcy7xpg9X7qWaSejuF18A5TfV4aEJAoGAOEx+mBpABIb/80O6EkBM\neEJJifAbMPdLp/C+T/znfaIwDz3tsl/03vVYp3URqySFMC5Z3hTZEP+s6edpJn71\nUaIHKJ6B85j9cgnT+fbvs854D7oPcLLbG6Ww/TlIDbxMG+VNU213j9wR9xyV6ACc\nG86Eu7d0BauNMg0qm+xe4Pk=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-zdpu0@fabrica-de-musculos-server.iam.gserviceaccount.com",
+  "client_id": "117995564606895185915",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-zdpu0%40fabrica-de-musculos-server.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
