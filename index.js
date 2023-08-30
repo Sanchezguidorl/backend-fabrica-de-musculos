@@ -1,4 +1,4 @@
-const cors = require("cors");
+
 const imagenesRouter = require("./imagenes.routes.js");
 const morgan = require("morgan");
 const { connectDB } = require("./database.js");
