@@ -8,10 +8,11 @@ const express = require("express");
 
 const app = express();
 const PORT = process.env.PORT || 4000;
-app.use(cors({
-  origin:'*',
-  exposedHeaders: ['Content-Length', 'X-Foo', 'X-Bar', 'Authorization'],
-}));
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Expose-Headers', 'Authorization');
+  next();
+});
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
