@@ -24,7 +24,7 @@ const authUser = async (req, res) => {
       if (authResult) {
         const accessToken = generateAccessToken(user);
         res
-          .header("authorization", accessToken)
+          .header("Authorization", accessToken)
           .json({ success: true, message: "successfully authenticated user" });
       } else {
       }
