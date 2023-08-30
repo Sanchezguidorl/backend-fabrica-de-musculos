@@ -18,7 +18,7 @@ const upload = multer({ storage });
 
 const router = Router();
 
-router.get("/images", validateToken, getImagenes);
+router.get("/images", getImagenes);
 
 router.post("/images/add", upload.single("image"), validateToken, createImagen);
 

@@ -7,7 +7,7 @@ const {
 const { validateToken } = require("./authentication/authMethods.js");
 const router = express.Router();
 
-router.get("/buttons", validateToken, getButtons);
+router.get("/buttons", getButtons);
 
 router.post("/buttons/add", validateToken, createButton);
 
