@@ -9,7 +9,6 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 4000;
 app.use(cors({
-  origin: '*',
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(morgan("dev"));
