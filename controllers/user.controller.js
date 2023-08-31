@@ -2,7 +2,6 @@ const {
   authenticationUser,
   generateAccessToken,
 } = require("../authentication/authMethods");
-const { generateHash } = require("../authentication/hashMethods");
 const User = require("../models/user.model");
 
 const getUserByUsername = async (username) => {
@@ -16,23 +15,23 @@ const getUserByUsername = async (username) => {
 
 const authUser = async (req, res) => {
   const { username, password } = req.body;
-  console.log(username);
   try {
     const user = await getUserByUsername(username);
-    if (user) {
+    if (user!==null) {
       const authResult = await authenticationUser(password, user.password);
-      if (authResult) {
+      if (authResult===true) {
         const accessToken = generateAccessToken(user);
         res
-          .header('Authorization', accessToken)
-          .json({ success: true, message: "successfully authenticated user" });
+          .header('Authorization', `Bearer ${accessToken}`)
+          .json({ success: true, message: "Successfully authenticated user" });
       } else {
+        res.status(401).json({ success: false, message: "Invalid credentials" });
       }
     } else {
-      throw new Error("User not found");
+      res.status(404).json({ success: false, message: "User not found" });
     }
   } catch (error) {
-    throw error;
+    res.status(500).json({ success: false, message: "An error occurred" });
   }
 };
 
